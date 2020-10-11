@@ -1,3 +1,16 @@
 galaxy_info:
   author: Iryna Zaitsava
-  description: Web server with mysql
+  description: Molecule tests with Testinfra
+  company: Co
+  role_name: docker
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+  - name: CentOs
+    versions:
+    - 7
+  galaxy_tags:
+    - docker
+    - ansible
+    - molecule
+    - testinfra

@@ -7,10 +7,11 @@
     state: directory
     recurse: yes
     force: yes
+    mode: 0750
   become: yes
 
 - name: install EPEL repo
-  yum: 
+  yum:
     name: epel-release
     state: present
 
@@ -28,12 +29,12 @@
   become: yes
 
 - name: install the package, force upgrade
-  pip: 
+  pip:
     name: pip
     extra_args: --upgrade
 
 - name: install python dependencies
-  pip: 
+  pip:
     name: "{{ pip_packages }}"
   become: yes
 
@@ -42,7 +43,7 @@
   become_method: sudo
   become_user: root
   become: yes
-  
+
 - name: check if directory was created
   shell: if [ -d "/etc/ansible/facts.d" ]; then echo "Yes"; fi
   changed_when: false
