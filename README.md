@@ -1,16 +1,15 @@
 # molecule_test_base
 ### Description: 
-*Testing ansible base role by molecule and tesinfra tests.*
-
+*Testing the role of ansible playbook with molecule tests and testinfra.*
 
 ### Requirements:
-*Please install docker and molecule/ Also you need use python 3.7 version for testinfra.*
+*You can of course install it using yum, apt or pacman, but pip is better.*
 - pip install docker molecule
 
-Of course, you can install its by yum,apt or pacman but better is using of pip.
+Of course, you can install its by yum,apt or pacman but better is using by pip.
 
 ### How to use:
-*Don't forget start docker service.*
+*Don't forget to start the docker service.*
 - systemctl start docker
 
 ### How to start:
