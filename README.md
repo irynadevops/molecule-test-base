@@ -4,16 +4,21 @@
 
 ### Requirements:
 *You can of course install it using yum, apt or pacman, but pip is better.*
-- pip install docker molecule
+- pip install docker molecule flake8 ansible-lint
 
-Of course, you can install its by yum,apt or pacman but better is using by pip.
+Of course, you can install its by yum, apt or pacman but better is using by pip.
 
 ### How to use:
 *Don't forget to start the docker service.*
-- systemctl start docker
+- sudo systemctl start docker
+
+### Recommendation:
+You need to use python version <= 3.7 for testinfra
+- pyenv install 3.7.1
+- pyenv local 3.7.1 (or global)
 
 ### How to start:
-- molecule init role <name_of_role>
+- molecule test
 
 [документация molecule](https://molecule.readthedocs.io/en/latest/getting-started.html) 
 
