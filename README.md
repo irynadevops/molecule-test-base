@@ -14,7 +14,9 @@ Of course, you can install its by yum, apt or pacman but better is using by pip.
 
 ### Recommendation:
 You need to use python version <= 3.7 for testinfra
-- pyenv install 3.7.1
+If you are using Python version other than 3.7.1, remove the ".python-version" file or install it.
+
+- pyenv install 3.7.1 (or any version of 3.7)
 - pyenv local 3.7.1 (or global)
 
 ### How to start:
