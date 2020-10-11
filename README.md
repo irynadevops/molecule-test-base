@@ -6,6 +6,9 @@
 *You can of course install it using yum, apt or pacman, but pip is better.*
 - pip install docker molecule flake8 ansible-lint
 
+*If you don't have it installed, run:*
+- sudo <apt, yum, pacman> install python3-pip libssl-dev
+
 ### How to use:
 *Don't forget to start the docker service.*
 - sudo systemctl start docker
