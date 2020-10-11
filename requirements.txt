@@ -1,0 +1,18 @@
+anyconfig >= 0.9.7
+cerberus <= 1.3
+click >= 6.7
+click-completion >= 0.3.1
+coverage >= 4.5.2
+flake8 >= 3.7.1
+pycodestyle >= 2.5.0
+mock >= 1.0.1
+pytest >= 4.3.1
+pytest-cov >= 2.6.1
+pytest-timeout >= 1.3.3
+yamllint
+molecule>=2.15.0
+docker
+ansible-lint>=3.4.0
+testinfra>=1.7.0
+jmespath
+python == 3.7.1

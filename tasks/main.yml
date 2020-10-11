@@ -1,0 +1,49 @@
+- debug: msg="running {{ role_name }} role"
+- debug: var=ansible_facts
+
+- name: ensure that path facts exist
+  file:
+    path: /etc/ansible/facts.d/
+    state: directory
+    recurse: yes
+    force: yes
+  become: yes
+
+- name: install EPEL repo
+  yum: 
+    name: epel-release
+    state: present
+
+- name: install apache
+  yum:
+    name: httpd
+    state: present
+  become: yes
+
+- name: Ensure sshd Service Enabled and Running
+  systemd:
+    name: httpd
+    state: started
+    enabled: yes
+  become: yes
+
+- name: install the package, force upgrade
+  pip: 
+    name: pip
+    extra_args: --upgrade
+
+- name: install python dependencies
+  pip: 
+    name: "{{ pip_packages }}"
+  become: yes
+
+- name: remove require tty
+  lineinfile: regexp="(\s+)?\w+\s+requiretty" dest=/etc/sudoers state=absent
+  become_method: sudo
+  become_user: root
+  become: yes
+  
+- name: check if directory was created
+  shell: if [ -d "/etc/ansible/facts.d" ]; then echo "Yes"; fi
+  changed_when: false
+  become: yes

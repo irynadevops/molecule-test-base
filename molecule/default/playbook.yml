@@ -1,0 +1,8 @@
+﻿- name: Installing Webapp-server
+  hosts: all
+  become: yes
+  roles:
+  - role: molecule_test_base
+  vars:
+    student_first_name: Iryna
+    student_last_name: Zaitsava
