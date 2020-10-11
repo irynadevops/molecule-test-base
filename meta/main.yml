@@ -2,7 +2,7 @@ galaxy_info:
   author: Iryna Zaitsava
   description: Molecule tests with Testinfra
   company: Co
-  role_name: molecule_test_base
+  role_name: docker
   license: MIT
   min_ansible_version: 2.4
   platforms:

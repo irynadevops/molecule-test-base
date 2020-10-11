@@ -2,4 +2,4 @@ pip_packages:
   - requests
   - jinja2
 
-role_name: molecule_test_base
+role_name: base
